@@ -1,0 +1,12 @@
+Trabajo con un archivo de texto, no binario.
+El formato json es visible desde un archivo de texto, y es fácil de leer tanto para la máquina como para una persona. Además, Json no es específico de Python, por lo tanto para acceder a los datos se puede usar programas desarrollados en otros lenguajes, no necesariamente Python.
+
+La información de cada jugador es almacenada en una lista de diccionarios, que luego es copiada al archivo. Json transforma la lista en texto, que es copiado en el archivo con el formato json.
+
+Mientras el programa se está ejecutando, se van registrando los nombres de todos los jugadores, los juegos que eligen y la fecha y hora a la que juegan. Estos quedan guardados en una lista de diccionarios de la forma:
+
+{"nombre":nombre, "juego":juego, "horario":dia_y_hora}
+
+De esta forma la información va quedando guardada temporalmente dentro del programa.
+
+Cuando un jugador elige "Salir" del programa, se abre el archivo (una única vez). Se hace usando "append" para agregar texto al final, sin pisar información ya existente en el mismo. Json transforma la lista de diccionarios en texto con un formato característico.
